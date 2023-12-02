@@ -1,0 +1,189 @@
+header {
+    width: var(--width-1);
+    margin-inline: auto;
+    height: var(--header-height);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+}
+
+header.change {
+    mix-blend-mode: unset;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+.logo_anchor {
+
+}
+
+header .logotype {
+    width: clamp(5rem, 30vw, 17rem);
+}
+
+.header_nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    padding-block: calc(var(--header-height) + 1rem) 3rem;
+    font-size: clamp(1.5rem, 9vw, 5.2rem);
+    font-weight: 800;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 8;
+    color: var(--grey);
+}
+
+.header_nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header_nav a {
+    padding: 0.6rem var(--corner-width-1);
+}
+
+.header_nav a:not(.disabled):hover {
+    opacity: 0.6;
+    transition: opacity 0s ease;
+    -webkit-transition: opacity 0s ease;
+    -moz-transition: opacity 0s ease;
+    -ms-transition: opacity 0s ease;
+    -o-transition: opacity 0s ease;
+}
+
+.header_nav a.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.hambt {
+    width: var(--header-height);
+    height: calc(var(--header-height) / 2);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 3;
+    margin-right: calc((var(--header-height) - clamp(2.5rem,9vw,4rem)) / -2);
+}
+
+.hambt > .ctnr {
+    width: clamp(2.5rem,8vw,4rem);
+    height: clamp(2rem,7vw,3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.hambt span {
+    height: 18%;
+    background-color: var(--light);
+    /* transition: opacity 0.2s ease, transform 0.2s ease; */
+}
+
+.hambt.close {
+
+}
+
+.hambt.close span:nth-child(1) {
+    transform: translateY(240%) rotate(45deg);
+    -webkit-transform: translateY(240%) rotate(45deg);
+    -moz-transform: translateY(240%) rotate(45deg);
+    -ms-transform: translateY(240%) rotate(45deg);
+    -o-transform: translateY(240%) rotate(45deg);
+}
+
+.hambt.close span:nth-child(2) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.hambt.close span:nth-child(3) {
+    opacity: 0;
+    transform: translateY(-220%);
+    -webkit-transform: translateY(-220%);
+    -moz-transform: translateY(-220%);
+    -ms-transform: translateY(-220%);
+    -o-transform: translateY(-220%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1150px) {
+
+    header {
+        width: fit-content;
+        margin-inline: unset;
+        left: var(--corner-width-2);
+    }
+
+    .hambt {
+        display: none;
+    }
+
+    .header_nav {
+        font-size: clamp(1.4rem, 1.5vw, 1.9rem);
+        opacity: 1;
+        visibility: visible;
+        top: 3rem;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: unset;
+        flex-direction: column;
+        align-items: end;
+        width: fit-content;
+        font-weight: 600;
+        right: var(--corner-width-2);
+        mix-blend-mode: difference;
+        color: var(--light);
+        z-index: 9;
+        gap: 0;
+    }
+
+    .header_nav a {
+        margin-inline: unset;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        transition: color 0.3s ease;
+        padding: 0.75rem 0;
+        transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+    }
+
+    header .cta {
+        margin-left: 1.5rem;
+        padding-block: 2rem;
+    }
+}

@@ -1,0 +1,95 @@
+---
+	import Layout from '../layouts/Layout.astro';
+	import Header from '../components/Header.astro';
+
+	import '../css/home.css'
+
+	import { Image, getImage } from 'astro:assets';
+
+	import Logo from '../assets/logo/logo.png';
+	import DarkBg01 from '../assets/dark-bg-01.png';
+	import CityShadow from '../assets/city-shadow.png';
+	import YellowShapes from '../assets/yellow-shapes.png';
+	import City from '../assets/city.png';
+	import CtaBg from '../assets/cta-bg.png';
+	import VanPhoto from '../assets/van_photo01.png';
+	import YellowGrainyGradient from '../assets/grain-gradient-yellow.png';
+
+	const DarkBg01Optimized = await getImage({src: DarkBg01, format: 'png'})
+	const CityShadowOptimized = await getImage({src: CityShadow, format: 'png'})
+	const YellowShapesOptimized = await getImage({src: YellowShapes, format: 'png'})
+	const CityOptimized = await getImage({src: City, format: 'png'})
+	const CtaBgOptimized = await getImage({src: CtaBg, format: 'png'})
+	const YellowGrainyGradientOptimized = await getImage({src: YellowGrainyGradient, format: 'png'})
+---
+
+<Layout title="Broken Dreams Coffee Co.">
+	<div class="overflow_ctnr">
+		<div class="city_shadow" style={`background-image: url(${CityShadowOptimized.src});`}></div>
+	</div>
+
+	<main>
+		<Header/>
+		<section class="intro reveal">
+			<div class="content">
+				<h1>Beyond the Brew</h1>
+				<h2>Crafting Narratives, <span style={`background-image: url(${CtaBgOptimized.src});`}>One Sip at a Time</span></h2>
+			</div>
+
+			<div class="logo_ctnr">
+				<script src="../js/gsap.js"></script>
+
+				<div class="color_bg scroll_animate1"></div>
+				<div class="color_bg scroll_animate1"></div>
+	
+				<Image src={Logo} class="logo" alt="Broken Dreams Logo" loading="eager" draggable="false"/>
+			</div>
+		</section>
+
+		<section class="dark_bg" style={`background-image: url(${DarkBg01Optimized.src});`}>
+			<div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div>
+
+			<h2>At <strong>Broken Dreams</strong>, our purpose transcends being just another <strong>coffee stop</strong>.</h2>
+
+			<p>We exist to infuse each cup with narratives, <b>where authenticity and aspiration converge</b>. Our aim is to stir not just the senses, but the very essence of your being.</p>
+		</section>
+
+		<section class="mission" id="mission">
+			<div class="grain_gradient" style={`background-image: url(${YellowGrainyGradientOptimized.src});`}></div>
+
+			<div class="content width3">
+				<h2>Dreaming Together<span>The Mission Behind Every Brew</span></h2>
+
+				<p><b>Our mission extends far beyond the streets our vans roam.</b> We strive to intertwine dreams with daily life, sharing <b>stories of resilience, creativity, and aspiration</b> through every beverage served.</p>
+
+				<p><b>We endeavor to create a community that resonates with the dreams of each team member and customer alike.</b></p>
+				
+				<a href="/#contact" class="cta" style={`background-image: url(${CtaBgOptimized.src});`}>Reach us out</a>
+			</div>
+
+			<div class="composition">
+				<div class="shapes" style={`background-image: url(${YellowShapesOptimized.src});`}></div>
+
+				<div class="city" style={`background-image: url(${CityOptimized.src});`}></div>
+
+				<!-- <div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div> -->
+			</div>
+		</section>
+
+		<section class="baristas_platform">
+			<div class="composition">
+				<Image src={VanPhoto} class="logo" alt="Broken Dreams Van Photo" draggable="false"/>
+			</div>
+
+			<div class="content width3">
+				<h2>We want to give our baristas a platform for their work.</h2>
+
+				<p>From <strong>hosting live performances</strong> during our coffee breaks to <b>featuring their original artworks</b> on our vans, we're committed to amplifying their creativity. Our platform isn't just about servin’g coffee; it's about celebrating the <b>talents and passions that each barista brings to the table</b>.</p>
+
+				<p>Join us in supporting our baristas as they share their art, music, and unique stories. <b>Together, let's continue to build a community that nurtures and uplifts the dreams of every individual.</b></p>
+				
+				<a href="/#contact" class="cta" style={`background-image: url(${CtaBgOptimized.src});`}>Reach us out</a>
+			</div>
+		</section>
+	</main>
+</Layout>

@@ -1,0 +1,76 @@
+---
+	import { Image } from 'astro:assets';
+	import Logotype from '../assets/logo/logotype-w.png';
+
+    import '../css/header.css'
+---
+
+<header>
+    <a href="/#home" class="logo_anchor">
+        <Image src={Logotype} class="logotype" alt="Broken Dreams Logotype" loading="eager" draggable="false"/>
+    </a>
+
+    <button class="hambt" type="button" aria-label="Open navigation menu">
+        <div class="ctnr">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+</header>
+
+<nav class="header_nav">
+    <a href="/#home">Home</a>
+
+    <a href="/#mission">Mission</a>
+
+    <a href="/#contact">Contact</a>
+
+    <a class="disabled" title="Soon!">Blog</a>
+
+    <a  class="disabled" title="Soon!">Events</a>
+
+    <a  class="disabled" title="Soon!">Menu</a>
+</nav>
+
+<script>
+    const header = document.querySelector('header')
+    const menuBt = document.querySelector(".hambt");
+    const nav = document.querySelector(".header_nav");
+    const navBts = document.querySelectorAll(".header_nav a");
+
+    let showingMenu = false;
+
+    function toggleNav() {
+        if (showingMenu == false) {
+            nav.classList.add("show");
+            menuBt.classList.add("close");
+
+            nav.style.backgroundColor = `var(--c${Math.floor(Math.random() * 4 + 2)})`
+            header.classList.add('change')
+
+            showingMenu = true;
+        } else {
+            nav.classList.remove("show");
+            menuBt.classList.remove("close");
+
+            showingMenu = false;
+
+            header.classList.remove('change')
+        }
+    }
+
+    if(window.getComputedStyle(menuBt).display != "none") {
+        menuBt.addEventListener("click", toggleNav);
+
+        for (let i = 0; i < navBts.length; i++) {
+            navBts[i].addEventListener("click", toggleNav);
+        }
+
+        window.addEventListener("scroll", function (e) {
+            if (showingMenu == true) {
+                toggleNav();
+            }
+        });
+    }
+</script>

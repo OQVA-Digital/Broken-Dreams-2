@@ -1,0 +1,370 @@
+.city_shadow {
+    width: 200rem;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 70%;
+    animation: move_shadow 50s ease infinite alternate;
+    -webkit-animation: move_shadow 50s ease infinite alternate;
+}
+
+@keyframes move_shadow {
+    0% {
+        transform: translateX(20%);
+        -webkit-transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        -o-transform: translateX(20%);
+    } 33% {
+        transform: translateX(-20%);
+        -webkit-transform: translateX(-20%);
+        -moz-transform: translateX(-20%);
+        -ms-transform: translateX(-20%);
+        -o-transform: translateX(-20%);
+} 66% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+} 100% {
+        transform: translateX(-40%);
+        -webkit-transform: translateX(-80%);
+        -moz-transform: translateX(-80%);
+        -ms-transform: translateX(-80%);
+        -o-transform: translateX(-80%);
+    }
+}
+
+section.intro {
+    padding-top: calc(var(--header-height) + 2rem);
+}
+
+.intro .logo {
+    width: clamp(10rem, 91vw, 85rem);
+    margin-inline: auto;
+    display: block;
+    position: relative;
+    filter: drop-shadow(0 0 10rem var(--light));
+}
+
+.logo_ctnr {
+    position: relative;
+}
+
+.intro .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color: var(--dark-a);
+    font-size: clamp(3rem, 18vw, 9.7rem);
+    font-weight: 900;
+    line-height: 0.85;
+    max-width: var(--width-1);
+}
+
+.intro .content h2 {
+    font-size: clamp(1rem, 7vw, 2.8rem);
+    font-weight: 800;
+    max-width: 70vw;
+    line-height: 1.2;
+}
+
+.intro .content h2 span {
+    color: var(--light);
+    /* background-color: var(--dark-a); */
+    font-weight: 600;
+    padding: 1.1rem 1.5rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    font-size: 0.9em;
+}
+
+.intro .color_bg {
+    position: absolute;
+    bottom: 0;
+}
+
+.intro .color_bg:first-of-type {
+    background-color: var(--c5);
+    width: calc(50vw - 10rem);
+    height: clamp(10rem, 35vw, 35rem);
+    clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%);
+    left: 0;
+}
+
+.intro .color_bg:nth-of-type(2) {
+    background-color: var(--c2);
+    width: clamp(1rem, calc(45vw - 3rem), 67rem);
+    height: clamp(10rem, 50vmin, 50rem);
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+    right: 0;
+}
+ 
+section.dark_bg {
+    width: 100%;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light);
+    font-weight: 500;
+    padding-block: clamp(8rem, 10vw, 12rem) clamp(8rem, 10vw, 15rem);
+    background-repeat: no-repeat;
+    line-height: 1.4;
+    font-size: clamp(1rem, 5vw, 2.7rem);
+}
+
+section.dark_bg .slice {
+    position: absolute;
+    background-size: 65rem;
+    background-position: top;
+    top: calc(clamp(1rem, 2vw, 2rem) * -1);
+    width: 100%;
+    height: 3rem;
+    mix-blend-mode: multiply;
+}
+
+section.dark_bg h2 {
+    font-weight: 400;
+    max-width: clamp(15rem, 80vw, 58rem);
+    font-size: inherit;
+}
+
+section.dark_bg h2 strong:first-child {
+    color: var(--c2);
+}
+
+section.dark_bg h2 strong:nth-child(2) {
+    color: var(--c3);
+}
+
+section.dark_bg p {
+    font-weight: 400;
+    max-width: clamp(15rem, 91vw, 73rem);
+}
+
+section.dark_bg b, section.dark_bg strong {
+    font-weight: 600;
+}
+
+.overflow_ctnr {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 98;
+}
+
+
+section.mission {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: -1rem;
+}
+
+.mission .grain_gradient {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: clamp(1rem, 50vw, 36rem);
+    height: clamp(1rem, 80vw, 50rem);
+    z-index: -1;
+    background-size: cover;
+    transform: rotate(-180deg);
+    background-position: top left;
+}
+
+.mission .content {
+    padding-block: clamp(3rem, 9vw, 11rem);
+    margin-bottom: -15rem;
+}
+
+.mission h2 {
+    color: var(--c3);
+    font-weight: 800;
+    font-size: clamp(3rem, 17vw, 11rem);
+    line-height: 1;
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.mission h2 span {
+    display: block;
+    color: var(--dark);
+    font-size: clamp(2rem, 5.5vw, 4rem);
+    font-weight: 800;
+}
+
+.mission p, .baristas_platform p {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 4vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.mission p {
+    max-width: clamp(10rem, 81vw, 80rem);
+}
+
+.mission p b, .mission p strong, .baristas_platform p b, .baristas_platform p strong {
+    font-weight: 700;
+}
+
+.mission .composition {
+    width: clamp(10rem, 72vw, 90rem);
+    height: clamp(10rem, 90vw, 90rem);
+    position: relative;
+    margin-left: auto;
+    /* margin-top: -40%; */
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* .mission .composition .slice {
+    position: absolute;
+    background-size: 65rem;
+    background-position: bottom;
+    top: calc(clamp(1rem, 2vw, 2rem) * -1);
+    width: 100%;
+    height: 3rem;
+    mix-blend-mode: multiply;
+} */
+
+.mission .composition .shapes, .mission .city {
+    position: absolute;
+    inset:0;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.mission .composition .shapes {
+    background-size: cover;
+}
+
+.mission .city {
+    bottom: -1rem;
+    background-size: clamp(10rem, 60vw, 75rem);
+}
+
+
+
+
+section.baristas_platform {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(2rem, 4vw, 6rem);
+}
+
+.baristas_platform .composition {
+    width: clamp(10rem, 100vw, 80rem);
+    position: relative;
+}
+
+.baristas_platform .composition img {
+    width: 100%;
+}
+
+.baristas_platform .content {
+    flex: 1;
+    max-width: clamp(15rem, 85vw, 67rem);
+    min-width: clamp(15rem, 40vw, 60rem);
+    padding-top: clamp(3rem, 9vw, 11rem);
+}
+
+.baristas_platform h2 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    max-width: clamp(10rem, 81vw, 80rem);
+    line-height: 1.2;
+}
+
+.baristas_platform p {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:900px) {
+    .intro .color_bg:first-of-type {
+        width: calc(58vw - 40rem);
+    }
+    .intro .color_bg:nth-of-type(2) {
+        width: clamp(1rem, calc(57vw - 18rem), 177rem);
+    }
+
+    .mission .content {
+        padding-bottom: unset;
+        margin-bottom: 30rem;
+    }
+
+    .mission p {
+        max-width: clamp(10rem, 50vw, 67rem);
+    }
+
+    .mission .composition {
+        position: absolute;
+        right:0;
+        bottom: 0;
+    }
+
+    section.baristas_platform {
+        max-width: calc(var(--width-3) + var(--corner-width-3));
+        justify-content: space-between;
+    }
+
+    .baristas_platform .composition {
+        width: unset;
+        min-width: clamp(10rem, 38vw, 80rem);
+        flex: 1;
+        max-width: clamp(10rem, 45vw, 120rem);
+        height: fit-content;
+        position: sticky;
+        top: -1rem;
+    }
+
+    .baristas_platform .content {
+        max-width: clamp(15rem, 35vw, 67rem);
+    }
+    
+}
+
+
+
+
+
+@media screen and (min-width:1300px) {
+    section.intro {
+        padding-top: 10rem;
+    }
+}
