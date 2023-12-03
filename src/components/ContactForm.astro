@@ -1,0 +1,42 @@
+---
+    import '../css/forms.css'
+
+    import { Image, getImage } from 'astro:assets';
+    import WhiteBg01 from '../assets/white-bg-01.png';
+    const WhiteBg01Optimized = await getImage({src: WhiteBg01, format: 'png'})
+---
+
+<form name="contact" method="POST" data-netlify="true">
+    <div class="flex">
+        <p>
+            <label>First name <input type="text" name="name" required/></label>
+        </p>
+
+        <p>
+            <label>Last name <input type="text" name="name" required/></label>
+        </p>
+    </div>
+
+    <p>
+        <label>Email <input type="email" name="email" required/></label>
+    </p>
+
+    <p>
+        <label>Message <textarea name="message" style={`background-image: url(${WhiteBg01Optimized.src});`} required></textarea></label>
+    </p>
+
+    <p>
+        <button class="cta" type="submit" aria-label="Submit contact form">Submit
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+                
+        <noscript>You need to enable JavaScript on your browser to submit emails.</noscript>
+    </p>
+</form>
+
+<script>
+    import "../js/form.js";
+</script>

@@ -1,6 +1,7 @@
 ---
 	import Layout from '../layouts/Layout.astro';
 	import Header from '../components/Header.astro';
+	import ContactForm from '../components/ContactForm.astro';
 
 	import '../css/home.css'
 
@@ -11,9 +12,11 @@
 	import CityShadow from '../assets/city-shadow.png';
 	import YellowShapes from '../assets/yellow-shapes.png';
 	import City from '../assets/city.png';
-	import CtaBg from '../assets/cta-bg.png';
+	import CtaBg from '../assets/field-bg-b.png';
 	import VanPhoto from '../assets/van_photo01.png';
 	import YellowGrainyGradient from '../assets/grain-gradient-yellow.png';
+	import BlueRec from '../assets/blue-rec.png';
+
 
 	const DarkBg01Optimized = await getImage({src: DarkBg01, format: 'png'})
 	const CityShadowOptimized = await getImage({src: CityShadow, format: 'png'})
@@ -21,6 +24,7 @@
 	const CityOptimized = await getImage({src: City, format: 'png'})
 	const CtaBgOptimized = await getImage({src: CtaBg, format: 'png'})
 	const YellowGrainyGradientOptimized = await getImage({src: YellowGrainyGradient, format: 'png'})
+	const BlueRecOptimized = await getImage({src: BlueRec, format: 'png'})
 ---
 
 <Layout title="Broken Dreams Coffee Co.">
@@ -74,11 +78,15 @@
 
 				<!-- <div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div> -->
 			</div>
+
+			<div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div>
 		</section>
 
 		<section class="baristas_platform">
 			<div class="composition">
 				<Image src={VanPhoto} class="logo" alt="Broken Dreams Van Photo" draggable="false"/>
+
+				<div class="shape" style={`background-image: url(${BlueRecOptimized.src});`}></div>
 			</div>
 
 			<div class="content width3">
@@ -90,6 +98,18 @@
 				
 				<a href="/#contact" class="cta" style={`background-image: url(${CtaBgOptimized.src});`}>Reach us out</a>
 			</div>
+		</section>
+
+		<section class="contact" style={`background-image: url(${CityOptimized.src});`}>
+			<div class="form_ctnr"  style={`background-image: url(${DarkBg01Optimized.src});`}>
+				<ContactForm/>
+			
+				<div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div>
+			
+				<div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div>
+			</div>
+
+			<div class="slice" style={`background-image: url(${DarkBg01Optimized.src});`}></div>
 		</section>
 	</main>
 </Layout>

@@ -24,7 +24,7 @@ header.change {
 }
 
 header .logotype {
-    width: clamp(5rem, 30vw, 17rem);
+    width: clamp(5rem, 30vw, 15rem);
 }
 
 .header_nav {

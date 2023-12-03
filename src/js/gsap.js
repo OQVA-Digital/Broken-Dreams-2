@@ -20,7 +20,7 @@ anim01.to(".scroll_animate1", {y: 300, opacity:0, duration: 1, ease: "power1.out
 const anim02 = gsap.timeline({
     scrollTrigger: {
         trigger: ".mission",
-        start: "-=300",
+        start: "-=900",
         scrub: 3,
         pin: false,
         markers:false,
