@@ -9,7 +9,7 @@ const anim01 = gsap.timeline({
         trigger: ".intro",
         start: "top top",
         end: "+=500",
-        scrub: 0.8,
+        scrub: 1.5,
         pin: false,
         markers:false,
     }
