@@ -51,11 +51,11 @@ header .logotype {
     visibility: visible;
 }
 
-.header_nav a {
+.header_nav a, .header_nav > span {
     padding: 0.6rem var(--corner-width-1);
 }
 
-.header_nav a:not(.disabled):hover {
+.header_nav a:hover {
     opacity: 0.6;
     transition: opacity 0s ease;
     -webkit-transition: opacity 0s ease;
@@ -64,7 +64,7 @@ header .logotype {
     -o-transition: opacity 0s ease;
 }
 
-.header_nav a.disabled {
+.header_nav > span {
     opacity: 0.3;
     cursor: default;
 }
@@ -167,7 +167,7 @@ header .logotype {
         gap: 0;
     }
 
-    .header_nav a {
+    .header_nav a, .header_nav > span {
         margin-inline: unset;
         background-color: transparent;
         display: flex;
