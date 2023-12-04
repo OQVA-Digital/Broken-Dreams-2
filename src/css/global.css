@@ -92,7 +92,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 2.4rem;
+    width: 2.6rem;
     height: 2rem;
 }
 
@@ -104,7 +104,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--light);
-    border:0.8rem solid var(--dark);
+    border:0.9rem solid var(--dark);
     border-right: unset;
 }
 
