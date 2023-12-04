@@ -258,7 +258,7 @@ section.mission {
 }
 
 .mission .composition {
-    width: clamp(10rem, 72vw, 90rem);
+    width: clamp(10rem, 80vw, 90rem);
     height: clamp(10rem, 90vw, 90rem);
     position: relative;
     margin-left: auto;
@@ -288,7 +288,7 @@ section.mission {
 
 .mission .city {
     bottom: -1rem;
-    background-size: clamp(10rem, 60vw, 65rem);
+    background-size: clamp(10rem, 70vw, 65rem);
 }
 
 
