@@ -54,7 +54,7 @@ html.sr .reveal {
 }
 
 .scroll_margin_top {
-    scroll-margin-top: calc(var(--header-height) + 4rem);
+    scroll-margin-top: calc(var(--header-height) + 2rem);
 }
 
 @font-face {
@@ -92,7 +92,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 2.6rem;
+    width: 2.4rem;
     height: 2rem;
 }
 
@@ -104,7 +104,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--light);
-    border:0.7rem solid var(--dark);
+    border:0.8rem solid var(--dark);
     border-right: unset;
 }
 
@@ -221,6 +221,10 @@ body {
 @media screen and (min-width:800px) {
     .mobile_hidden {
         display: inherit;
+    }
+
+    .scroll_margin_top {
+        scroll-margin-top: 2rem;
     }
 }
 

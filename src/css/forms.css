@@ -47,8 +47,8 @@ form select {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    font-family: 'LexendDeca', sans-serif;
-    font-weight: 400;
+    font-family: inherit;
+    font-weight: 600;
     color: var(--dark);
     background-repeat: no-repeat;
     background-size: 100% 100%;
