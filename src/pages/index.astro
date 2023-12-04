@@ -18,6 +18,7 @@
 	import YellowGrainyGradient from '../assets/grain-gradient-yellow.png';
 	import BlueRec from '../assets/blue-rec.png';
 	import PinkRec from '../assets/pink-rec.png';
+	import GreenRec from '../assets/green-rec.png';
 
 
 	const DarkBg01Optimized = await getImage({src: DarkBg01, format: 'png'})
@@ -28,7 +29,6 @@
 	const GrainyShadowOptimized = await getImage({src: GrainyShadow, format: 'png'})
 	const YellowGrainyGradientOptimized = await getImage({src: YellowGrainyGradient, format: 'png'})
 	const BlueRecOptimized = await getImage({src: BlueRec, format: 'png'})
-	// const PinkRecOptimized = await getImage({src: PinkRec, format: 'png'})
 ---
 
 <Layout title="Broken Dreams Coffee Co.">
@@ -53,7 +53,10 @@
 				<div class="grain_shadow first" style={`background-image: url(${GrainyShadowOptimized.src});`}></div>
 				<div class="grain_shadow second" style={`background-image: url(${GrainyShadowOptimized.src});`}></div>
 	
-				<Image src={Logo} class="logo" alt="Broken Dreams Logo" loading="eager" draggable="false"/>
+				<Image src={Logo} class="logo" 
+				widths={[240, 540, 720, Logo.width]}
+  				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${Logo.width}px`}
+   				alt="Broken Dreams Logo" loading="eager" draggable="false"/>
 			</div>
 		</section>
 
@@ -121,7 +124,11 @@
 			<div class="city" style={`background-image: url(${CityOptimized.src});`}></div>
 			
 	
-			<Image src={PinkRec} class="rec1" alt="Pink rectangle" draggable="false"/>
+			<div class="rec_ctnr">
+				<Image src={PinkRec} class="rec1" alt="Pink rectangle" draggable="false"/>
+		
+				<Image src={GreenRec} class="rec2" alt="Green rectangle" draggable="false"/>
+			</div>
 		</section>
 	</main>
 </Layout>

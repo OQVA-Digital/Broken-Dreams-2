@@ -28,7 +28,7 @@ const anim02 = gsap.timeline({
     }
 });
 
-anim02.from(".mission .shapes", {x: 400, opacity: 0, duration: 1})
+anim02.from(".mission .shapes", {x: 400, duration: 1})
 
 
 
@@ -37,8 +37,8 @@ const anim03 = gsap.timeline({
     scrollTrigger: {
         trigger: "section.contact",
         start: "-=400",
-        end: "+=1200",
-        scrub: 2,
+        end: "bottom bottom",
+        scrub: 3,
         pin: false,
         markers:false,
     }
@@ -60,4 +60,17 @@ const anim04 = gsap.timeline({
     }
 });
 
-anim04.from(".baristas_platform .composition img", {xPercent: -15, duration: 1})
+anim04.from(".baristas_platform .composition img", {xPercent: -15,yPercent:-10, rotation:-5, duration: 1})
+
+const anim05 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".baristas_platform",
+        start: "-=800",
+        end: "+=1000",
+        scrub: 5,
+        pin: false,
+        markers:false,
+    }
+});
+
+anim05.from(".baristas_platform .composition .shape", {xPercent: 30, yPercent:-15, rotation:-20, duration: 1})
